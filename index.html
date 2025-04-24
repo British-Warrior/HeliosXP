@@ -1,21 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HELIOSXP | Choice by Design</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HELIOSXP | A Sovereign Future</title>
+  <style>
+    :root {
+      --primary: #b08dff;
+      --bg: #0b0b1a;
+      --text: #ffffff;
+      --muted: #aaaaaa;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: radial-gradient(circle at top left, #12121f, #0b0b1a);
+      color: var(--text);
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      padding: 4rem 1rem 1rem;
+      text-align: center;
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    h1 {
+      font-size: 3.2rem;
+      color: var(--primary);
+      margin: 0;
+    }
+
+    h2 {
+      font-size: 1.5rem;
+      color: var(--muted);
+      font-weight: 400;
+      margin-top: 1rem;
+    }
+
+    .quote, .subtitle {
+      font-size: 1.2rem;
+      margin: 2rem auto;
+      max-width: 800px;
+      text-align: center;
+      color: #ddd;
+    }
+
+    .cta-button {
+      background-color: var(--primary);
+      color: #0b0b1a;
+      font-size: 1.1rem;
+      font-weight: bold;
+      padding: 1rem 2rem;
+      border: none;
+      border-radius: 12px;
+      text-decoration: none;
+      display: inline-block;
+      transition: background-color 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #d1aaff;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 2rem;
+    }
+
+    footer {
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.9rem;
+      color: #666;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body>
-  <main class="container">
-    <h1 class="hero-title">HELIOSXP</h1>
-    <h2 class="tagline">A Sovereign Future, Built by Choice</h2>
+  <header>
+    <h1>HELIOSXP</h1>
+    <h2>A Sovereign Future, Built by Choice</h2>
+  </header>
+  <main>
     <p class="quote">This isn’t a product. It’s a civilisation. And it begins with those who choose.</p>
     <p class="subtitle">Born from intention, guided by ethics, and shaped by every mind that steps forward.</p>
-    <a href="#" class="cta-button">Support the Mission</a>
+    <a class="cta-button" href="#">Support the Mission</a>
   </main>
   <footer>
-    <p>&copy; 2025 HELIOSXP — Design By Choice</p>
+    &copy; 2025 HELIOSXP &mdash; Choice By Design
   </footer>
 </body>
 </html>
