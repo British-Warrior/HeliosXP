@@ -81,6 +81,26 @@
   </div>
 
 </div>
+<!-- Petal Tribute Modal -->
+<div id="modal-petal" class="modal hidden">
+  <div class="modal-content">
+    <span class="close" data-close="modal-petal">&times;</span>
+    <h3>Guardian Petal Sponsorship</h3>
+    <p>You may name a Petal that will live within the Continuity Ring. If it is ever called to shield HELIOS, your choice will echo forever.</p>
+
+    <label for="petalName">Petal Name</label><br />
+    <input type="text" id="petalName" placeholder="e.g. Silent Light" /><br />
+
+    <label for="petalMessage">Tribute Message (optional)</label><br />
+    <textarea id="petalMessage" rows="3" placeholder="A whisper into eternity..."></textarea><br />
+
+    <label><input type="radio" name="visibility" value="public" checked /> Public Tribute</label><br />
+    <label><input type="radio" name="visibility" value="anonymous" /> Anonymous</label><br />
+    <label><input type="radio" name="visibility" value="tribute" /> In Tribute To Someone Else</label><br />
+
+    <button id="submitPetal" class="cta-button" style="margin-top: 1rem;">Submit Petal</button>
+  </div>
+</div>
 
   </footer>
 </body>
