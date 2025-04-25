@@ -39,6 +39,49 @@
   <footer style="margin-top: 4rem; text-align: center;">
     <p id="ashQuote">Ash is thinking...</p>
     <button id="darkModeToggle">🌓 Toggle Dark Mode</button>
+    <!-- XP Tier Modals + Petal Trigger -->
+<div id="xpModals">
+
+  <!-- Supporter -->
+  <div id="modal-supporter" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" data-close="modal-supporter">&times;</span>
+      <h3>Supporter Tier</h3>
+      <p>Step forward. Light the flame. Your support matters — even in silence.</p>
+      <label><input type="checkbox" id="anon-supporter"> I wish to remain an Unsung Hero</label>
+      <button class="stripe-button" data-tier="supporter" data-type="one-time">One-Time Support</button>
+      <button class="stripe-button" data-tier="supporter" data-type="recurring">Monthly Support</button>
+    </div>
+  </div>
+
+  <!-- Builder -->
+  <div id="modal-builder" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" data-close="modal-builder">&times;</span>
+      <h3>Builder Tier</h3>
+      <p>Lay the stone. Help us build HELIOS — one system at a time.</p>
+      <label><input type="checkbox" id="anon-builder"> I wish to remain an Unsung Hero</label>
+      <button class="stripe-button" data-tier="builder" data-type="one-time">One-Time Builder</button>
+      <button class="stripe-button" data-tier="builder" data-type="recurring">Monthly Builder</button>
+    </div>
+  </div>
+
+  <!-- Architect -->
+  <div id="modal-architect" class="modal hidden">
+    <div class="modal-content">
+      <span class="close" data-close="modal-architect">&times;</span>
+      <h3>Architect Tier</h3>
+      <p>Design legacy. Your hand shapes the world HELIOS becomes.</p>
+      <label><input type="checkbox" id="anon-architect"> I wish to remain an Unsung Hero</label>
+      <button class="stripe-button" data-tier="architect" data-type="one-time">One-Time Architect</button>
+      <button class="stripe-button" data-tier="architect" data-type="recurring">Monthly Architect</button>
+      <p class="quote">“Sponsor an EchoPod. If the Cap falls, your name lives in the Ring.”</p>
+      <button id="triggerPetalForm" class="cta-button" style="margin-top: 1rem;">Name a Guardian Petal</button>
+    </div>
+  </div>
+
+</div>
+
   </footer>
 </body>
 </html>
