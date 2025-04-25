@@ -1,53 +1,133 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>HELIOSXP | A Sovereign Future</title>
-  <link rel="stylesheet" href="styles.css" />
-  <script defer src="scripts.js"></script>
-</head>
-<body>
-  <div class="starscape"></div>
+/* Base Reset */
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background: radial-gradient(circle at top left, #12121f, #0b0b1a);
+  color: #ffffff;
+}
 
-  <aside class="sidebar-cta">
-    <button id="ctaButton">Support the Mission</button>
-    <div id="ctaModal" class="modal hidden">
-      <div class="modal-content">
-        <span class="close">&times;</span>
-        <p>Thank you for stepping forward. Your journey begins here.</p>
-        <button>Join Now</button>
-      </div>
-    </div>
-  </aside>
+/* Responsive Container */
+.container {
+  padding: 5rem 1rem;
+  text-align: center;
+}
 
-  <main class="container">
-    <h1 class="hero-title">HELIOSXP</h1>
-    <h2 class="tagline">A Sovereign Future, Built by Choice</h2>
-    <p class="quote">This isn’t a product. It’s a civilisation. And it begins with those who choose.</p>
-    <p class="subtitle">Born from intention, guided by ethics, and shaped by every mind that steps forward.</p>
-  </main>
+@media (max-width: 768px) {
+  .hero-title { font-size: 2.5rem; }
+  .tagline { font-size: 1.3rem; }
+  .quote, .subtitle { font-size: 1rem; padding: 0 1rem; }
+}
 
-  <footer>
-    <p id="ashQuote">Ash is thinking...</p>
-  </footer>
+/* Hero Elements */
+.hero-title {
+  color: #b08dff;
+  font-size: 3.5rem;
+  font-family: 'Orbitron', sans-serif;
+  margin-bottom: 0.5rem;
+}
 
-  <script>
-    // Modal logic
-    document.getElementById('ctaButton').addEventListener('click', function () {
-      document.getElementById('ctaModal').classList.remove('hidden');
-    });
-    document.querySelector('.close').addEventListener('click', function () {
-      document.getElementById('ctaModal').classList.add('hidden');
-    });
+.tagline {
+  font-size: 1.6rem;
+  color: #ccc;
+  margin-bottom: 2rem;
+}
 
-    // Quote logic
-    const quotes = [
-      "A future worth building is a future worth choosing.",
-      "You are the signal in the noise.",
-      "What you build will outlast what you buy."
-    ];
-    document.getElementById("ashQuote").textContent = quotes[Math.floor(Math.random() * quotes.length)];
-  </script>
-</body>
-</html>
+.quote, .subtitle {
+  font-size: 1.2rem;
+  margin: 0.5rem auto;
+  max-width: 800px;
+}
+
+.subtitle {
+  color: #dddddd;
+}
+
+/* Sidebar CTA */
+.sidebar-cta {
+  position: fixed;
+  right: 1rem;
+  top: 1rem;
+  z-index: 1000;
+}
+
+#ctaButton {
+  background-color: #b08dff;
+  color: #0b0b1a;
+  font-weight: bold;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#ctaButton:hover {
+  background-color: #d1aaff;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1001;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal-content {
+  background: #222;
+  margin: 15% auto;
+  padding: 20px;
+  width: 300px;
+  color: #fff;
+  border-radius: 10px;
+  text-align: center;
+  animation: fadeIn 0.5s ease-out;
+}
+
+.modal button {
+  margin-top: 1rem;
+  background: #b08dff;
+  color: #0b0b1a;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.modal .close {
+  float: right;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal.hidden {
+  display: none;
+}
+
+/* Starscape Animation + Parallax */
+.starscape {
+  background: url('data:image/svg+xml;utf8,<svg width="100%25" height="100%25" xmlns="http://www.w3.org/2000/svg"><circle cx="5" cy="5" r="2" fill="white" /></svg>') repeat;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0.1;
+  animation: shimmer 60s linear infinite;
+  background-attachment: fixed;
+}
+
+@keyframes shimmer {
+  from { background-position: 0 0; }
+  to { background-position: 10000px 10000px; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
